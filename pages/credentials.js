@@ -1,2 +1,2 @@
-exports.username = "doug@maplarge.com";
-exports.password = "Maps123!";
+exports.username = "";
+exports.password = "";
