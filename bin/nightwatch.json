@@ -18,7 +18,7 @@
     "cli_args" : {
       "webdriver.chrome.driver" : "bin/chromedriver",
       "webdriver.gecko.driver" : "bin/geckodriver.exe",
-      "webdriver.firefox.profile" : "Maplarge"
+      "webdriver.firefox.profile" : "default"
     }
   },
 
@@ -37,8 +37,8 @@
       },
       "globals": {
       	"env" : "qa",
-        "root_username" : "root_user@ml.com",
-        "root_password" : "qa!pass123"
+        "root_username" : "",
+        "root_password" : ""
       },
       "desiredCapabilities" : {
           "_comment" : "safari, chrome, or firefox",
@@ -63,8 +63,8 @@
       },
       "globals": {
       	"env" : "qa",
-        "root_username" : "root_user@ml.com",
-        "root_password" : "qa!pass123"
+        "root_username" : "",
+        "root_password" : ""
       },
       "desiredCapabilities" : {
           "_comment" : "safari, chrome, or firefox",
@@ -89,8 +89,8 @@
       },
       "globals": {
       	"env" : "qa",
-        "root_username" : "root_user@ml.com",
-        "root_password" : "qa!pass123"
+        "root_username" : "",
+        "root_password" : ""
       },
       "desiredCapabilities" : {
           "_comment" : "safari, chrome, or firefox",
