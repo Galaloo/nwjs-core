@@ -65,7 +65,7 @@
       	"env" : "qa",
         "root_username" : "",
         "root_password" : ""
-      },
+     },
       "desiredCapabilities" : {
           "_comment" : "safari, chrome, or firefox",
         "browserName" : "chrome",
