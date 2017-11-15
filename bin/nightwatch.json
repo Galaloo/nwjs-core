@@ -1,0 +1,356 @@
+{
+  "src_folders" : ["./tests"],
+  "output_folder" : "./reports",
+  "custom_commands_path" : "./commands",
+  "custom_assertions_path" : "./assertions",
+  "page_objects_path" :[ "./pages", "./pages/driveTexas", "./pages/mow"],
+  "globals_path" : "./global.js",
+  "live_output" : false,
+  "parallel_process_delay" : 10,
+  "disable_colors": false,
+
+  "selenium" : {
+    "start_process" : true,
+    "server_path" : "bin/selenium-server-standalone-3.4.0.jar",
+    "log_path" : "",
+    "host" : "127.0.0.1",
+    "port" : 4445,
+    "cli_args" : {
+      "webdriver.chrome.driver" : "bin/chromedriver",
+      "webdriver.gecko.driver" : "bin/geckodriver.exe",
+      "webdriver.firefox.profile" : "Maplarge"
+    }
+  },
+
+  
+  
+  "test_settings" : {
+    "default" : {
+      "launch_url" : "http://qanightly.maplarge.com",
+      "selenium_host" : "127.0.0.1",
+      "selenium_port" : 4445,
+      "silent" : true,
+      "disable_colors": false,
+      "screenshots" : {
+        "enabled" : true,
+        "path" : "./reports"
+      },
+      "globals": {
+      	"env" : "qa",
+        "root_username" : "root_user@ml.com",
+        "root_password" : "qa!pass123"
+      },
+      "desiredCapabilities" : {
+          "_comment" : "safari, chrome, or firefox",
+        "browserName" : "chrome",
+        "javascriptEnabled" : true,
+        "acceptSslCerts" : true,  
+        "chromeOptions" : {
+    		"args" : ["disable-infobars"]
+  		}
+      }
+    },
+
+	"qac" : {
+	  "launch_url" : "http://qa.maplarge.com",
+      "selenium_host" : "127.0.0.1",
+      "selenium_port" : 4445,
+      "silent" : true,
+      "disable_colors": false,
+      "screenshots" : {
+        "enabled" : true,
+        "path" : "./reports"
+      },
+      "globals": {
+      	"env" : "qa",
+        "root_username" : "root_user@ml.com",
+        "root_password" : "qa!pass123"
+      },
+      "desiredCapabilities" : {
+          "_comment" : "safari, chrome, or firefox",
+        "browserName" : "chrome",
+        "javascriptEnabled" : true,
+        "acceptSslCerts" : true,  
+        "chromeOptions" : {
+    		"args" : ["disable-infobars"]
+  		}
+	  }
+	},
+
+	"qaff" : {
+	  "launch_url" : "http://qanightly.maplarge.com",
+      "selenium_host" : "127.0.0.1",
+      "selenium_port" : 4445,
+      "silent" : true,
+      "disable_colors": false,
+      "screenshots" : {
+        "enabled" : true,
+        "path" : "./reports"
+      },
+      "globals": {
+      	"env" : "qa",
+        "root_username" : "root_user@ml.com",
+        "root_password" : "qa!pass123"
+      },
+      "desiredCapabilities" : {
+          "_comment" : "safari, chrome, or firefox",
+        "browserName" : "firefox",
+        "marionette": true,
+        "javascriptEnabled" : true,
+        "acceptSslCerts" : true
+	  }
+	},
+    
+	"alphac" : {
+	  "launch_url" : "http://alphaapi.maplarge.com",
+      "selenium_host" : "127.0.0.1",
+      "selenium_port" : 4445,
+      "silent" : true,
+      "disable_colors": false,
+      "screenshots" : {
+        "enabled" : true,
+        "path" : "./reports"
+      },
+      "globals": {
+      	"env" : "qa",
+        "root_username" : "root_user@ml.com",
+        "root_password" : "qa!pass123"
+      },
+      "desiredCapabilities" : {
+          "_comment" : "safari, chrome, or firefox",
+        "browserName" : "chrome",
+        "javascriptEnabled" : true,
+        "acceptSslCerts" : true,  
+        "chromeOptions" : {
+    		"args" : []
+  		}
+	  }
+	},
+    
+	"mowff" : {
+	  "launch_url" : "http://qa.maplarge.com/map.html?api=MOW#",
+      "selenium_host" : "127.0.0.1",
+      "selenium_port" : 4445,
+      "silent" : true,
+      "disable_colors": false,
+	  "page_objects_path" : "./pages/mow",
+      "screenshots" : {
+        "enabled" : true,
+        "path" : "./reports"
+      },
+      "globals": {
+      	"env" : "mow",
+        "root_username" : "root_user@ml.com",
+        "root_password" : "qa!pass123"
+      },
+      "desiredCapabilities" : {
+          "_comment" : "safari, chrome, or firefox",
+        "browserName" : "firefox",
+        "marionette": true,
+        "javascriptEnabled" : true,
+        "acceptSslCerts" : true
+	  },
+   	  "cli_args" : {
+      "webdriver.firefox.profile" : "Maplarge"
+    }
+	},
+    
+	"drivetexasc" : {
+	  "launch_url" : "http://drivetexas.org/",
+      "selenium_host" : "127.0.0.1",
+      "selenium_port" : 4445,
+      "silent" : true,
+      "disable_colors": false,
+      "screenshots" : {
+        "enabled" : true,
+        "path" : "./reports"
+      },
+      "desiredCapabilities" : {
+          "_comment" : "safari, chrome, or firefox",
+        "browserName" : "chrome",
+        "javascriptEnabled" : true,
+        "acceptSslCerts" : true
+	  }
+	},
+    
+    "cbtc" : {
+      "launch_url" : "http://qanightly.maplarge.com",
+      "selenium_port"  : 80,
+      "selenium_host"  : "hub.crossbrowsertesting.com",
+      "silent": true,
+      "screenshots" : {
+        "enabled" : false,
+        "path" : ""
+      },
+      "globals": {
+        "root_username" : "root_user@ml.com",
+        "root_password" : "qa!pass123"
+      },
+      "username": "glenn@maplarge.com",
+      "access_key": "uc90495c1f7121d9",
+      "desiredCapabilities": {
+        "acceptSslCerts": "1",
+        "browserName": "chrome",
+        "browser_api_name": "Chrome57x64",
+        "build": "1.0",
+        "javascriptEnabled": "1",
+        "name": "1_accountsTest",
+        "os_api_name" : "Win10-E14",
+        "platform": "ANY",
+        "record_network" : "true",
+        "record_video" : "true",
+        "screen_resolution" : "1280x768",
+        "chromeOptions" : {
+    		"args" : ["disable-infobars"]}
+      }
+    },
+    
+    "cbtff" : {
+      "launch_url" : "http://qanightly.maplarge.com",
+      "selenium_port"  : 80,
+      "selenium_host"  : "hub.crossbrowsertesting.com",
+      "silent": true,
+      "screenshots" : {
+        "enabled" : false,
+        "path" : ""
+      },
+      "globals": {
+        "root_username" : "root_user@ml.com",
+        "root_password" : "qa!pass123"
+      },
+      "username": "Glenn Kirbo",
+      "access_key": "uc90495c1f7121d9",
+      "desiredCapabilities": {
+        "acceptSslCerts":true,
+        "browserName": "firefox",
+        "browser_api_name": "FF46",
+        "build": "1.0",
+        "record_video": true,
+        "record_network": true,
+        "name": "1_accountsTest",
+        "os_api_name" : "Win10-E14",
+        "screen_resolution" : "1280x768"
+      }
+    },
+    
+    "cbtie" : {
+      "launch_url" : "http://www.google.com/",
+      "selenium_port"  : 80,
+      "selenium_host"  : "hub.crossbrowsertesting.com",
+      "silent": true,
+      "screenshots" : {
+        "enabled" : false,
+        "path" : ""
+      },
+      "globals": {
+        "root_username" : "root_user@ml.com",
+        "root_password" : "qa!pass123"
+      },
+      "username": "galalooapps@gmail.com",
+      "access_key": "u9460681cfb6d7bf",
+      "desiredCapabilities": {
+        "acceptSslCerts": "1",
+        "browserName": "internet explorer",
+        "browser_api_name": "IE10",
+        "build": "1.0",
+        "javascriptEnabled": "1",
+        "name": "1_accountsTest",
+        "os_api_name" : "Win7x64-C2",
+        "platform": "ANY",
+        "record_network" : "true",
+        "record_video" : "true",
+        "screen_resolution" : "1024x768"
+      }
+    },
+
+	"prods" : {
+	  "launch_url" : "http://DougUserTest.maplarge.net/",
+      "selenium_host" : "127.0.0.1",
+      "selenium_port" : 4445,
+      "silent" : true,
+      "disable_colors": false,
+      "screenshots" : {
+        "enabled" : true,
+        "path" : "./reports"
+      },
+      "desiredCapabilities" : {
+          "_comment" : "safari, chrome, or firefox",
+        "browserName" : "safari",
+        "javascriptEnabled" : true,
+        "acceptSslCerts" : true
+	  }
+	},
+    
+     "saucelabs" : {
+      "selenium_host" : "ondemand.saucelabs.com",
+      "selenium_port" : 80,
+      "username" : "${SAUCE_USERNAME}",
+      "access_key" : "${SAUCE_ACCESS_KEY}",
+      "use_ssl" : false,
+      "silent" : true,
+      "output" : true,
+      "screenshots" : {
+        "enabled" : false,
+        "on_failure" : true,
+        "path" : ""
+      },
+      "desiredCapabilities": {
+        "name" : "test-example",
+        "browserName": "chrome"
+      },
+      "globals" : {
+        "myGlobal" : "some_sauce_global"
+      },
+      "selenium" : {
+        "start_process" : false
+      }
+    },
+
+    "phantomjs" : {
+      "desiredCapabilities" : {
+        "browserName" : "phantomjs",
+        "javascriptEnabled" : true,
+        "acceptSslCerts" : true,
+        "phantomjs.binary.path" : "/path/to/phantomjs"
+      }
+    },
+
+    "browserstack" : {
+      "selenium" : {
+        "start_process" : false
+      },
+      "selenium_host" : "hub.browserstack.com",
+      "selenium_port" : 80,
+      "silent" : true,
+      "desiredCapabilities": {
+        "name" : "test-example",
+        "browserName": "firefox",
+        "browserstack.user" : "...",
+        "browserstack.key" : "..."
+      }
+    },
+    
+    "testingbot" : {
+      "selenium_host" : "hub.testingbot.com",
+      "selenium_port" : 80,
+      "apiKey" : "${TB_KEY}",
+      "apiSecret" : "${TB_SECRET}",
+      "silent" : true,
+      "output" : true,
+      "screenshots" : {
+        "enabled" : false,
+        "on_failure" : true,
+        "path" : ""
+      },
+      "desiredCapabilities": {
+        "name" : "test-example",
+        "browserName": "firefox"
+      },
+      "selenium" : {
+        "start_process" : false
+      }
+    }
+  }
+}
+
+
