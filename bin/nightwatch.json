@@ -1,0 +1,239 @@
+{
+  "src_folders" : ["./tests"],
+  "output_folder" : "./reports",
+  "custom_commands_path" : "./commands",
+  "custom_assertions_path" : "./assertions",
+  "page_objects_path" :[ "./pages"],
+  "globals_path" : "./global.js",
+  "live_output" : false,
+  "parallel_process_delay" : 10,
+  "disable_colors": false,
+
+  "selenium" : {
+    "start_process" : true,
+    "server_path" : "bin/selenium-server-standalone-3.4.0.jar",
+    "log_path" : "",
+    "host" : "127.0.0.1",
+    "port" : 4445,
+    "cli_args" : {
+      "webdriver.chrome.driver" : "bin/chromedriver",
+      "webdriver.gecko.driver" : "bin/geckodriver.exe",
+      "webdriver.firefox.profile" : "Maplarge"
+    }
+  },
+
+  
+  
+  "test_settings" : {
+    "default" : {
+      "launch_url" : "http://www.google.com",
+      "selenium_host" : "127.0.0.1",
+      "selenium_port" : 4445,
+      "silent" : true,
+      "disable_colors": false,
+      "screenshots" : {
+        "enabled" : true,
+        "path" : "./reports"
+      },
+      "globals": {
+      	"env" : "qa",
+        "root_username" : "root_user@ml.com",
+        "root_password" : "qa!pass123"
+      },
+      "desiredCapabilities" : {
+          "_comment" : "safari, chrome, or firefox",
+        "browserName" : "chrome",
+        "javascriptEnabled" : true,
+        "acceptSslCerts" : true,  
+        "chromeOptions" : {
+    		"args" : ["disable-infobars"]
+  		}
+      }
+    },
+
+	"qac" : {
+      "launch_url" : "http://www.google.com",
+      "selenium_host" : "127.0.0.1",
+      "selenium_port" : 4445,
+      "silent" : true,
+      "disable_colors": false,
+      "screenshots" : {
+        "enabled" : true,
+        "path" : "./reports"
+      },
+      "globals": {
+      	"env" : "qa",
+        "root_username" : "root_user@ml.com",
+        "root_password" : "qa!pass123"
+      },
+      "desiredCapabilities" : {
+          "_comment" : "safari, chrome, or firefox",
+        "browserName" : "chrome",
+        "javascriptEnabled" : true,
+        "acceptSslCerts" : true,  
+        "chromeOptions" : {
+    		"args" : ["disable-infobars"]
+  		}
+	  }
+	},
+
+	"qaff" : {
+      "launch_url" : "http://www.google.com",
+      "selenium_host" : "127.0.0.1",
+      "selenium_port" : 4445,
+      "silent" : true,
+      "disable_colors": false,
+      "screenshots" : {
+        "enabled" : true,
+        "path" : "./reports"
+      },
+      "globals": {
+      	"env" : "qa",
+        "root_username" : "root_user@ml.com",
+        "root_password" : "qa!pass123"
+      },
+      "desiredCapabilities" : {
+          "_comment" : "safari, chrome, or firefox",
+        "browserName" : "firefox",
+        "marionette": true,
+        "javascriptEnabled" : true,
+        "acceptSslCerts" : true
+	  }
+	},
+    
+    
+   
+    "cbtc" : {
+      "launch_url" : "http://www.google.com",
+      "selenium_port"  : 80,
+      "selenium_host"  : "hub.crossbrowsertesting.com",
+      "silent": true,
+      "screenshots" : {
+        "enabled" : false,
+        "path" : ""
+      },
+      "globals": {
+        "root_username" : "user",
+        "root_password" : "pass"
+      },
+      "username": "name",
+      "access_key": "key",
+      "desiredCapabilities": {
+        "acceptSslCerts": "1",
+        "browserName": "chrome",
+        "browser_api_name": "Chrome57x64",
+        "build": "1.0",
+        "javascriptEnabled": "1",
+        "name": "1_accountsTest",
+        "os_api_name" : "Win10-E14",
+        "platform": "ANY",
+        "record_network" : "true",
+        "record_video" : "true",
+        "screen_resolution" : "1280x768",
+        "chromeOptions" : {
+    		"args" : ["disable-infobars"]}
+      }
+    },
+    
+    "cbtff" : {
+      "launch_url" : "http://www.google.com",
+      "selenium_port"  : 80,
+      "selenium_host"  : "hub.crossbrowsertesting.com",
+      "silent": true,
+      "screenshots" : {
+        "enabled" : false,
+        "path" : ""
+      },
+      "globals": {
+        "root_username" : "user",
+        "root_password" : "pass"
+      },
+      "username": "name",
+      "access_key": "key",
+      "desiredCapabilities": {
+        "acceptSslCerts":true,
+        "browserName": "firefox",
+        "browser_api_name": "FF46",
+        "build": "1.0",
+        "record_video": true,
+        "record_network": true,
+        "name": "1_accountsTest",
+        "os_api_name" : "Win10-E14",
+        "screen_resolution" : "1280x768"
+      }
+    },
+    
+    
+     "saucelabs" : {
+      "selenium_host" : "ondemand.saucelabs.com",
+      "selenium_port" : 80,
+      "username" : "${SAUCE_USERNAME}",
+      "access_key" : "${SAUCE_ACCESS_KEY}",
+      "use_ssl" : false,
+      "silent" : true,
+      "output" : true,
+      "screenshots" : {
+        "enabled" : false,
+        "on_failure" : true,
+        "path" : ""
+      },
+      "desiredCapabilities": {
+        "name" : "test-example",
+        "browserName": "chrome"
+      },
+      "globals" : {
+        "myGlobal" : "some_sauce_global"
+      },
+      "selenium" : {
+        "start_process" : false
+      }
+    },
+
+    "phantomjs" : {
+      "desiredCapabilities" : {
+        "browserName" : "phantomjs",
+        "javascriptEnabled" : true,
+        "acceptSslCerts" : true,
+        "phantomjs.binary.path" : "/path/to/phantomjs"
+      }
+    },
+
+    "browserstack" : {
+      "selenium" : {
+        "start_process" : false
+      },
+      "selenium_host" : "hub.browserstack.com",
+      "selenium_port" : 80,
+      "silent" : true,
+      "desiredCapabilities": {
+        "name" : "test-example",
+        "browserName": "firefox",
+        "browserstack.user" : "...",
+        "browserstack.key" : "..."
+      }
+    },
+    
+    "testingbot" : {
+      "selenium_host" : "hub.testingbot.com",
+      "selenium_port" : 80,
+      "apiKey" : "${TB_KEY}",
+      "apiSecret" : "${TB_SECRET}",
+      "silent" : true,
+      "output" : true,
+      "screenshots" : {
+        "enabled" : false,
+        "on_failure" : true,
+        "path" : ""
+      },
+      "desiredCapabilities": {
+        "name" : "test-example",
+        "browserName": "firefox"
+      },
+      "selenium" : {
+        "start_process" : false
+      }
+    }
+  }
+}
+
+

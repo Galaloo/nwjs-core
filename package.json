@@ -1,0 +1,20 @@
+{
+  "name": "core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nightwatch"
+  ],
+  "author": "Galaloo LLC <galalooapps@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "nightwatch": "^0.9.16",
+    "nightwatch-html-reporter": "^2.0.4",
+    "node-resemble-js": "^0.2.0",
+    "request": "^2.83.0"
+  }
+}

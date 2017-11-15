@@ -1,0 +1,16 @@
+#\#*
+#\.#*
+#.project
+#*.DS_Store
+#*.idea
+#npm-debug.log
+#lib-cov
+#coverage.html
+#selenium-debug.log
+#phantomjsdriver.log
+#tests_output
+#output
+
+#/reports/
+/node_modules/
+#/tests/screenshots/
