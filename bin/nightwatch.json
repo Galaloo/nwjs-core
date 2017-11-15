@@ -3,7 +3,7 @@
   "output_folder" : "./reports",
   "custom_commands_path" : "./commands",
   "custom_assertions_path" : "./assertions",
-  "page_objects_path" :[ "./pages", "./pages/driveTexas", "./pages/mow"],
+  "page_objects_path" :[ "./pages"],
   "globals_path" : "./global.js",
   "live_output" : false,
   "parallel_process_delay" : 10,
@@ -26,7 +26,7 @@
   
   "test_settings" : {
     "default" : {
-      "launch_url" : "http://qanightly.maplarge.com",
+      "launch_url" : "http://www.google.com",
       "selenium_host" : "127.0.0.1",
       "selenium_port" : 4445,
       "silent" : true,
@@ -52,7 +52,7 @@
     },
 
 	"qac" : {
-	  "launch_url" : "http://qa.maplarge.com",
+      "launch_url" : "http://www.google.com",
       "selenium_host" : "127.0.0.1",
       "selenium_port" : 4445,
       "silent" : true,
@@ -78,7 +78,7 @@
 	},
 
 	"qaff" : {
-	  "launch_url" : "http://qanightly.maplarge.com",
+      "launch_url" : "http://www.google.com",
       "selenium_host" : "127.0.0.1",
       "selenium_port" : 4445,
       "silent" : true,
@@ -101,80 +101,10 @@
 	  }
 	},
     
-	"alphac" : {
-	  "launch_url" : "http://alphaapi.maplarge.com",
-      "selenium_host" : "127.0.0.1",
-      "selenium_port" : 4445,
-      "silent" : true,
-      "disable_colors": false,
-      "screenshots" : {
-        "enabled" : true,
-        "path" : "./reports"
-      },
-      "globals": {
-      	"env" : "qa",
-        "root_username" : "root_user@ml.com",
-        "root_password" : "qa!pass123"
-      },
-      "desiredCapabilities" : {
-          "_comment" : "safari, chrome, or firefox",
-        "browserName" : "chrome",
-        "javascriptEnabled" : true,
-        "acceptSslCerts" : true,  
-        "chromeOptions" : {
-    		"args" : []
-  		}
-	  }
-	},
     
-	"mowff" : {
-	  "launch_url" : "http://qa.maplarge.com/map.html?api=MOW#",
-      "selenium_host" : "127.0.0.1",
-      "selenium_port" : 4445,
-      "silent" : true,
-      "disable_colors": false,
-	  "page_objects_path" : "./pages/mow",
-      "screenshots" : {
-        "enabled" : true,
-        "path" : "./reports"
-      },
-      "globals": {
-      	"env" : "mow",
-        "root_username" : "root_user@ml.com",
-        "root_password" : "qa!pass123"
-      },
-      "desiredCapabilities" : {
-          "_comment" : "safari, chrome, or firefox",
-        "browserName" : "firefox",
-        "marionette": true,
-        "javascriptEnabled" : true,
-        "acceptSslCerts" : true
-	  },
-   	  "cli_args" : {
-      "webdriver.firefox.profile" : "Maplarge"
-    }
-	},
-    
-	"drivetexasc" : {
-	  "launch_url" : "http://drivetexas.org/",
-      "selenium_host" : "127.0.0.1",
-      "selenium_port" : 4445,
-      "silent" : true,
-      "disable_colors": false,
-      "screenshots" : {
-        "enabled" : true,
-        "path" : "./reports"
-      },
-      "desiredCapabilities" : {
-          "_comment" : "safari, chrome, or firefox",
-        "browserName" : "chrome",
-        "javascriptEnabled" : true,
-        "acceptSslCerts" : true
-	  }
-	},
-    
+   
     "cbtc" : {
-      "launch_url" : "http://qanightly.maplarge.com",
+      "launch_url" : "http://www.google.com",
       "selenium_port"  : 80,
       "selenium_host"  : "hub.crossbrowsertesting.com",
       "silent": true,
@@ -183,11 +113,11 @@
         "path" : ""
       },
       "globals": {
-        "root_username" : "root_user@ml.com",
-        "root_password" : "qa!pass123"
+        "root_username" : "user",
+        "root_password" : "pass"
       },
-      "username": "glenn@maplarge.com",
-      "access_key": "uc90495c1f7121d9",
+      "username": "name",
+      "access_key": "key",
       "desiredCapabilities": {
         "acceptSslCerts": "1",
         "browserName": "chrome",
@@ -206,7 +136,7 @@
     },
     
     "cbtff" : {
-      "launch_url" : "http://qanightly.maplarge.com",
+      "launch_url" : "http://www.google.com",
       "selenium_port"  : 80,
       "selenium_host"  : "hub.crossbrowsertesting.com",
       "silent": true,
@@ -215,11 +145,11 @@
         "path" : ""
       },
       "globals": {
-        "root_username" : "root_user@ml.com",
-        "root_password" : "qa!pass123"
+        "root_username" : "user",
+        "root_password" : "pass"
       },
-      "username": "Glenn Kirbo",
-      "access_key": "uc90495c1f7121d9",
+      "username": "name",
+      "access_key": "key",
       "desiredCapabilities": {
         "acceptSslCerts":true,
         "browserName": "firefox",
@@ -233,53 +163,6 @@
       }
     },
     
-    "cbtie" : {
-      "launch_url" : "http://www.google.com/",
-      "selenium_port"  : 80,
-      "selenium_host"  : "hub.crossbrowsertesting.com",
-      "silent": true,
-      "screenshots" : {
-        "enabled" : false,
-        "path" : ""
-      },
-      "globals": {
-        "root_username" : "root_user@ml.com",
-        "root_password" : "qa!pass123"
-      },
-      "username": "galalooapps@gmail.com",
-      "access_key": "u9460681cfb6d7bf",
-      "desiredCapabilities": {
-        "acceptSslCerts": "1",
-        "browserName": "internet explorer",
-        "browser_api_name": "IE10",
-        "build": "1.0",
-        "javascriptEnabled": "1",
-        "name": "1_accountsTest",
-        "os_api_name" : "Win7x64-C2",
-        "platform": "ANY",
-        "record_network" : "true",
-        "record_video" : "true",
-        "screen_resolution" : "1024x768"
-      }
-    },
-
-	"prods" : {
-	  "launch_url" : "http://DougUserTest.maplarge.net/",
-      "selenium_host" : "127.0.0.1",
-      "selenium_port" : 4445,
-      "silent" : true,
-      "disable_colors": false,
-      "screenshots" : {
-        "enabled" : true,
-        "path" : "./reports"
-      },
-      "desiredCapabilities" : {
-          "_comment" : "safari, chrome, or firefox",
-        "browserName" : "safari",
-        "javascriptEnabled" : true,
-        "acceptSslCerts" : true
-	  }
-	},
     
      "saucelabs" : {
       "selenium_host" : "ondemand.saucelabs.com",
