@@ -1,10 +1,11 @@
 {
   "name": "core",
   "version": "1.0.0",
-  "description": "",
+  "description": "https://github.com/dwyl/learn-nightwatch, https://github.com/dwyl/env2, ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "node nightwatch.conf.js",
+    "local": "nightwatch --config nightwatch.conf.js"
   },
   "keywords": [
     "nightwatch"
@@ -12,9 +13,14 @@
   "author": "Galaloo LLC <galalooapps@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "env2": "^2.2.0",
     "nightwatch": "^0.9.16",
     "nightwatch-html-reporter": "^2.0.4",
     "node-resemble-js": "^0.2.0",
+    "npm-check-updates": "^2.14.0",
     "request": "^2.83.0"
+  },
+  "devDependencies": {
+    "selenium-download": "^2.0.10"
   }
 }

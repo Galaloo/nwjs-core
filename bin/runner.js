@@ -1,9 +1,10 @@
 /**
  * Module dependencies
  */
-var Logger = require('../lib/util/logger.js');
-var Nightwatch = require('../lib/index.js');
-var Utils = require('../lib/util/utils.js');
+
+var Logger = require('../node_modules/nightwatch/lib/util/logger.js');
+var Nightwatch = require('../node_modules/nightwatch/lib/index.js');
+var Utils = require('../node_modules/nightwatch/lib/util/utils.js');
 
 try {
   Nightwatch.cli(function(argv) {

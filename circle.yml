@@ -1,0 +1,22 @@
+machine:
+  node:
+    version: 6.9.2
+
+dependencies:
+  pre:
+    - npm install
+
+## Running Tests
+test:
+  pre:
+    # MAGIC HAPPENS HERE
+    # Download the browserstack binary file to create a tunnel
+    - wget "https://www.browserstack.com/browserstack-local/BrowserStackLocal-linux-x64.zip"
+    # Unzip the browserstack binary file
+    - unzip BrowserStackLocal-linux-x64.zip
+    # Run the file with your access key
+    - ./BrowserStackLocal $BROWSERSTACK KEY:
+        background: true
+
+  override:
+    - npm run android -- --tag example #Run tests with tag "example" on Browserstack Samsung Galaxy S8
